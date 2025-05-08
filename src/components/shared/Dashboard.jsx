@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./header/Header";
 import { Card } from "../ui/card";
 import { mockCompanyDetails } from "@/constants/mock";
+import Details from "./details/Details";
 
 export default function Dashboard() {
   return (
@@ -15,7 +16,7 @@ export default function Dashboard() {
         <Card className={"h-full"}>Overview</Card>
       </div>
       <div className="row-span-2 md:col-span-1">
-        <Card className={"h-full"}>Details</Card>
+        <Details details={mockCompanyDetails} />
       </div>
     </div>
   );
