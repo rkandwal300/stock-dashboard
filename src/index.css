@@ -3,6 +3,8 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+
 @layer base {
 
   *,
@@ -99,13 +101,38 @@
 
 
 @layer base {
+  html {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  /* .quicksand {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal; 
+  } */
 
   body {
     @apply bg-background text-foreground;
   }
 }
 
-@theme inline {
+@layer components {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    width:5px;
+    border-radius: 10px;
+  }
+}
+
+
+@theme {
   --color-border: var(--border);
   --color-page: var(--page);
   --color-input: var(--input);
@@ -158,9 +185,10 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 m-0 p-0;
   }
 
   body {
