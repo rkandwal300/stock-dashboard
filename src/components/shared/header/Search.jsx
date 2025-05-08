@@ -1,13 +1,13 @@
 import { mockSearchResults } from "@/constants/mock";
 import React, { useState } from "react";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { Search as SIcon, X } from "lucide-react";
 
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "@/components/ui/popover"; 
 import SearchResult from "./SearchResult";
 
 function Search() {
