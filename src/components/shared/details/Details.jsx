@@ -1,18 +1,18 @@
 import { Card } from "@/components/ui/card";
+import dayjs from "dayjs";
 import React from "react";
 
 function Details({ details }) {
   const detailList = {
     name: "Name",
-    country: "Country",
-    exchange: "Exchange",
-    ipo: "IPO Date",
-    marketCapitalization: "Market Capitalization",
-    finnhubIndustry: "Industry",
+    open: "Open",
+    previous_close: "Previous Close",
+    high: "High",
+    type: "Type",
+    last_update_utc: "Last Updated",
   };
 
-  const convertMillionToBillion = (number) => (number / 100).toFixed(2);
-
+ 
   return (
     <Card className='p-4'>
       <ul className={"h-full w-full flex flex-col jb divide-y-1"}>
@@ -20,8 +20,8 @@ function Details({ details }) {
           <li key={item} className="flex justify-between items-center py-2 gap-2">
             <span className="font-medium">{detailList[item]}</span>
             <span>
-              {item === "marketCapitalization"
-                ? `${convertMillionToBillion(detailList[item])}B`
+              {item === "last_update_utc"
+                ? dayjs(details[item]).format('MMMM D, YYYY h:mm A') 
                 : details[item]}
             </span>
           </li>
