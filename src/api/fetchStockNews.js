@@ -1,6 +1,6 @@
-export const fetchQuote = async (stockSymbol) => {
+export const fetchStockNews = async (stockSymbol) => {
   const baseUrl = import.meta.env.VITE_RAPID_API_URL;
-  const url = new URL(`${baseUrl}/stock-quote`); 
+  const url = new URL(`${baseUrl}/stock-news`);
 
   url.searchParams.set("symbol", stockSymbol);
   url.searchParams.set("language", "en");
