@@ -1,4 +1,5 @@
 import Dashboard from "./components/shared/Dashboard";
+import TrendCardList from "./components/shared/marketTrends/TrendCardList";
 import NewsList from "./components/shared/News/NewsList";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -15,6 +16,9 @@ function App() {
       </TabsContent>
       <TabsContent value="news">
         <NewsList />;
+      </TabsContent>
+      <TabsContent value="marketplace">
+        <TrendCardList />;
       </TabsContent>
     </Tabs>
   );
