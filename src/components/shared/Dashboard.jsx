@@ -27,11 +27,8 @@ export default function Dashboard() {
 
   if (loading)
     return (
-      <div className="flex flex-col">
-        <Header name={""} />
-        <div className="flex h-screen w-full justify-center items-center font-medium">
-          Loading......
-        </div>
+      <div className="flex h-screen w-full justify-center items-center font-medium">
+        Loading......
       </div>
     );
 

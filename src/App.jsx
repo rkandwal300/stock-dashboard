@@ -1,3 +1,4 @@
+import CompanyOverview from "./components/shared/companyOverview/CompanyOverview";
 import Dashboard from "./components/shared/Dashboard";
 import TrendCardList from "./components/shared/marketTrends/TrendCardList";
 import NewsList from "./components/shared/News/NewsList";
@@ -10,6 +11,7 @@ function App() {
         <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
         <TabsTrigger value="news">News</TabsTrigger>
         <TabsTrigger value="marketplace">Market Place</TabsTrigger>
+        <TabsTrigger value="companyOverview">Company Overview</TabsTrigger>
       </TabsList>
       <TabsContent value="dashboard">
         <Dashboard />;
@@ -19,6 +21,9 @@ function App() {
       </TabsContent>
       <TabsContent value="marketplace">
         <TrendCardList />;
+      </TabsContent>
+      <TabsContent value="companyOverview">
+        <CompanyOverview />;
       </TabsContent>
     </Tabs>
   );
